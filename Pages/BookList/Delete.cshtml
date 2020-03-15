@@ -1,0 +1,14 @@
+﻿@page
+@model BookListRazor.DeleteModel
+
+
+<br />
+<h2 class="text-info">Delete Book</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <p>Are you sure you want to delete <b>@Model.Book.Name</b>?</p>
+    <form asp-page-handler="Delete" asp-route-id="@Model.Book.Id" method="post">
+        <button class="btn btn-danger">Confirm</button>
+    </form>
+</div>
